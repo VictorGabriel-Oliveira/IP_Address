@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.1.0/ipgeolocation.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h2>
+          IP  Address Tracker
+        </h2>
+
+        <form action="GET"  >
+          <input id="IP" class="input_ip"/>
+          <button class="button_submit"  id="btn_submit"type="submit"><img src="./images/icon-arrow.svg"></button>
+        </form>
+    </header>
+    <div id="modal">
+       <div class="modal_item">
+           <strong>
+               IP ADDRESS
+           </strong>
+           <h3 id="ip_address"></h3>
+       </div>
+       <hr>
+       <div class="modal_item">
+            <strong>
+                LOCATION
+            </strong>
+            <h3 id="location"></h3>
+       </div>
+       <hr>
+       <div class="modal_item">
+        <strong>
+            TIMEZONE
+        </strong>
+        <h3 id="timezone"></h3>
+       </div>
+       <hr>
+       <div class="modal_item">
+        <strong>
+            ISP
+        </strong>
+        <h3 id="isp"></h3>
+       </div>
+    </div>
+    <div id="map">
+        
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
